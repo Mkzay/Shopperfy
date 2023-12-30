@@ -29,7 +29,7 @@ const NavBar = () => {
             <FontAwesomeIcon icon={faBars} />
           </button>
           <img className="w-4/12 md:w-full" src="./logo.png" alt="logo" />
-          <p className="text-base font-bold md:text-2xl">SHOPPER</p>
+          <p className="text-base font-bold md:text-2xl">SHOPPERFY</p>
         </div>
       </NavLink>
       <div
