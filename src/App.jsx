@@ -6,6 +6,9 @@ import ShopCategory from "./Pages/ShopCategory";
 import Product from "./Pages/Product";
 import LoginSignup from "./Pages/LoginSignup";
 import Cart from "./Pages/Cart";
+import men_banner from "/banner_mens.png"
+import women_banner from "/banner_women.png"
+import kids_banner from "/banner_kids.png"
 
 const App = () => {
   return (
@@ -14,16 +17,20 @@ const App = () => {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Shop />} />
-          <Route exact path="/Men" element={<ShopCategory category="Men" />} />
+          <Route
+            exact
+            path="/Men"
+            element={<ShopCategory category="Men" banner={men_banner} />}
+          />
           <Route
             exact
             path="/Women"
-            element={<ShopCategory category="Women" />}
+            element={<ShopCategory category="Women" banner={women_banner} />}
           />
           <Route
             exact
             path="/Kids"
-            element={<ShopCategory category="Kids" />}
+            element={<ShopCategory category="Kids" banner={kids_banner} />}
           />
           <Route exact path="/Product" element={<Product />}>
             <Route exact path=":productId" element={<Product />} />
