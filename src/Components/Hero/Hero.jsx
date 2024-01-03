@@ -3,7 +3,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col-reverse gap-14 p-10 md:gap-24 bg-gradient-to-r from-gradient1 to gradient2 lg:flex-row md:px-36">
+    <div className="flex flex-col-reverse w-full gap-14 p-10 md:gap-24 bg-gradient-to-r from-gradient1 to gradient2 lg:flex-row md:px-36">
       <div className="flex flex-1 flex-col items-start justify-center gap-4">
         <h3 className="text-lg font-bold md:text-xl">NEW ARRIVALS ONLY</h3>
         <div className="flex items-center gap-4">

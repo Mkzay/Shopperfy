@@ -12,7 +12,7 @@ const Footer = () => {
         <img src="logo_big.png" alt="logo" />
         <h3 className="text-lg font-bold md:text-3xl">SHOPPERFY</h3>
       </div>
-      <ul className="flex flex-col gap-8 text-xl font-semibold md:flex-row md:gap-14 md:font-semibold md:text-base">
+      <ul className="flex flex-col gap-8 text-lg font-semibold md:flex-row md:gap-14 md:font-semibold md:text-base">
         <li>Company</li>
         <li>Products</li>
         <li>Offices</li>
