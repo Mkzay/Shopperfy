@@ -23,15 +23,15 @@ const NavBar = () => {
 
   return (
     <div className="flex items-center justify-between p-5 px-3 py-3 border-b border-gray-600 sticky w-full md:px-5 md:justify-between lg:justify-around">
-      <NavLink to="./">
-        <div className="flex items-center justify-center gap-1 md:gap-2.5">
-          <button onClick={openMenu} className="mr-2 text-xl md:hidden">
-            <FontAwesomeIcon icon={faBars} />
-          </button>
+      <div className="flex items-center justify-center gap-1 md:gap-2.5">
+        <button onClick={openMenu} className="mr-2 text-xl md:hidden">
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+        <NavLink to="./" className="flex items-center gap-2">
           <img className="w-4/12 md:w-full" src="./logo.png" alt="logo" />
           <p className="text-base font-bold md:text-2xl">SHOPPERFY</p>
-        </div>
-      </NavLink>
+        </NavLink>
+      </div>
       <div
         className={`${
           isMenuOpen
@@ -39,7 +39,7 @@ const NavBar = () => {
             : "-translate-x-[100%] duration-500 ease-out md:translate-x-0"
         } flex flex-col items-start gap-1 absolute top-0 left-0 bg-white w-[87%] h-screen md:relative md:w-auto md:h-auto md:shadow-[0%]`}
       >
-        <div className="flex items-center justify-center gap-1 p-5 pt-[18.9px] pb-0 md:gap-2.5 md:hidden">
+        <div className="flex items-center justify-center gap-2.5 p-5 pt-[18.9px] pb-0 md:gap-2.5 md:hidden">
           <button onClick={openMenu} className="mr-4 text-lg">
             <FontAwesomeIcon icon={faX} />
           </button>
