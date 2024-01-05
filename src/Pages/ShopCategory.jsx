@@ -10,7 +10,7 @@ const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
   return (
     <div className="flex flex-col items-center justify-center gap-7 mb-28">
-      <img className="w-10/12" src={props.banner} />
+      <img className="w-11/12 md:10/12" src={props.banner} />
       <div className="flex items-center justify-between w-11/12 md:px-20">
         <p className="text-sm">
           <span className="font-bold">Showing 1 - 12</span> out of 36 products
