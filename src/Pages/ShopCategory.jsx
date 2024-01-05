@@ -11,7 +11,7 @@ const ShopCategory = (props) => {
   return (
     <div className="flex flex-col items-center justify-center gap-7 mb-28">
       <img className="w-10/12" src={props.banner} />
-      <div className="flex items-center justify-between w-11/12 px-20">
+      <div className="flex items-center justify-between w-11/12 md:px-20">
         <p className="text-sm">
           <span className="font-bold">Showing 1 - 12</span> out of 36 products
         </p>
@@ -20,21 +20,27 @@ const ShopCategory = (props) => {
           <FontAwesomeIcon className="text-gray-700" icon={faCaretDown} />{" "}
         </p>
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-20 ">
+      <div className="flex flex-wrap items-center justify-center gap-20 p-5">
         {all_product.map((item, i) => {
-          return (
-            <Item
-              key={i}
-              id={item.id}
-              name={item.name}
-              image={item.image}
-              new_price={item.new_price}
-              old_price={item.old_price}
-            />
-          );
+          if (props.category === item.category) {
+            return (
+              <Item
+                key={i}
+                id={item.id}
+                name={item.name}
+                image={item.image}
+                new_price={item.new_price}
+                old_price={item.old_price}
+              />
+            );
+          } else {
+            return null;
+          }
         })}
       </div>
-      <button className="text-sm bg-gray-300 p-3 font-semibold text-gray-500 rounded-full w-2/12">Explore More</button>
+      <button className="text-sm bg-gray-300 p-3 font-semibold text-gray-500 rounded-full w-2/12">
+        Explore More
+      </button>
     </div>
   );
 };

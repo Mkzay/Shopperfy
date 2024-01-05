@@ -10,14 +10,29 @@ import {
   faBagShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const openMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const activeLink = "text-rose-600 border-b-4 pb-2 border-rose-600 border-";
 
@@ -33,6 +48,7 @@ const NavBar = () => {
         </NavLink>
       </div>
       <div
+        ref={menuRef}
         className={`${
           isMenuOpen
             ? "translate-x-0  duration-300 ease-in shadow-2xl shadow-black drop-shadow-2xl"
