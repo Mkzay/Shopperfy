@@ -15,10 +15,10 @@ const ShopCategory = (props) => {
         <p className="text-sm">
           <span className="font-bold">Showing 1 - 12</span> out of 36 products
         </p>
-        <p className="text-sm flex gap-2 items-center border border-gray-500 rounded-full p-2 w-20">
-          Sort by{" "}
-          <FontAwesomeIcon className="text-gray-700" icon={faCaretDown} />{" "}
-        </p>
+        <div className="flex gap-1 items-center border border-gray-500 rounded-full p-2 w-20">
+          <p className="text-sm ">Sort by</p>
+          <FontAwesomeIcon className="text-gray-700" icon={faCaretDown} />
+        </div>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-20 p-5">
         {all_product.map((item, i) => {
